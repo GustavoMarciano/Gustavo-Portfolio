@@ -1,0 +1,138 @@
+.grid-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1240px;
+  display: grid;
+  grid-template-rows: 45px 225px 225px 300px 50px;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas: "NAV NAV" "A B" "A C " "D D" "FOO FOO";
+  grid-gap: 1em; }
+
+.NAV {
+  grid-area: NAV;
+  display: grid;
+  background-color: #7d80da;
+  border-bottom: 3px solid #1b1c1d;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-rows: 45px;
+  grid-template-areas: "LOGO . NAVG SOCIAL "; }
+
+.header-logo {
+  grid-area: LOGO;
+  font-size: 2em;
+  font-weight: 600;
+  justify-self: center;
+  align-self: center; }
+
+.header-nav {
+  grid-area: NAVG;
+  padding: 1px;
+  justify-self: end; }
+  .header-nav li {
+    display: inline-block; }
+  .header-nav li a {
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    text-decoration: none; }
+  .header-nav li a:hover {
+    padding-bottom: 5px;
+    background-color: whitesmoke;
+    border-bottom: 10px solid #1b1c1d; }
+
+.header-social {
+  grid-area: SOCIAL;
+  align-self: center;
+  justify-self: center; }
+  .header-social a {
+    color: black;
+    text-align: center;
+    text-decoration: none; }
+
+.SECTION {
+  background-color: white;
+  border-bottom: 10px solid #1b1c1d; }
+
+.CARD-CONTAINER {
+  grid-area: D;
+  display: grid;
+  grid-template-areas: "1 2 3 ";
+  grid-gap: 1em; }
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0px, 600px);
+  grid-template-rows: 200px 85px;
+  grid-template-areas: "image" "text"; }
+  .card div {
+    padding-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    border-bottom: 10px solid #1b1c1d; }
+  .card img {
+    background-color: #7d80da;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%; }
+
+.A {
+  grid-area: A; }
+
+.B {
+  grid-area: B;
+  display: grid;
+  grid-template-areas: "A"; }
+  .B img {
+    grid-area: A;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    cursor: pointer; }
+    .B img :hover {
+      opacity: 0.7; }
+  .B div {
+    padding: 2px;
+    justify-self: right;
+    text-align: right;
+    grid-area: A;
+    align-self: end;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.C {
+  grid-area: C;
+  display: grid;
+  grid-template-areas: "A"; }
+  .C img {
+    grid-area: A;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    cursor: pointer; }
+  .C div {
+    padding: 2px;
+    justify-self: right;
+    text-align: right;
+    grid-area: A;
+    align-self: end;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.FOO {
+  background-color: #7d80da;
+  border-bottom: 10px solid #1b1c1d;
+  text-decoration: none;
+  text-align: center;
+  grid-area: FOO;
+  display: grid;
+  grid-template-columns: minmax(0px, 1fr) 2fr minmax(0px, 1fr);
+  grid-template-areas: ". center ."; }
+  .FOO div {
+    grid-area: center;
+    align-self: center;
+    justify-self: center; }

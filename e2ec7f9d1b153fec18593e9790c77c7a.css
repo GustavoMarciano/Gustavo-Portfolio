@@ -1,0 +1,156 @@
+.grid-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1240px;
+  display: grid;
+  grid-template-rows: 45px 225px 225px 300px;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas: "NAV NAV" "A B" "A C " "D D";
+  grid-gap: 1em; }
+  @media only screen and (max-width: 900px) {
+    .grid-container {
+      display: grid;
+      grid-template-rows: 50px 2fr 1fr 1fr 3fr;
+      grid-template-columns: 2fr;
+      grid-template-areas: "NAV" "A" "B" "C" "D";
+      grid-gap: 2em; } }
+
+.NAV {
+  grid-area: NAV;
+  display: grid;
+  background-color: #1b998b;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-areas: "LOGO . . SOCIAL "; }
+  @media only screen and (max-width: 900px) {
+    .NAV {
+      grid-template-columns: 1fr  1fr;
+      grid-template-areas: "LOGO SOCIAL "; } }
+
+.header-logo {
+  grid-area: LOGO;
+  font-size: 2em;
+  font-weight: 600;
+  color: white;
+  justify-self: center;
+  align-self: center; }
+  @media only screen and (max-width: 768px) {
+    .header-logo {
+      font-size: 1.5em; } }
+
+.header-social {
+  grid-area: SOCIAL;
+  align-self: center;
+  justify-self: center; }
+  .header-social a {
+    color: black;
+    text-align: center;
+    text-decoration: none; }
+    .header-social a:hover {
+      padding: 0px;
+      background-color: whitesmoke; }
+
+.SECTION {
+  background-color: white; }
+
+.CARD-CONTAINER {
+  grid-area: D;
+  display: grid;
+  grid-template-areas: "1 2 3 ";
+  grid-gap: 1em; }
+  @media only screen and (max-width: 900px) {
+    .CARD-CONTAINER {
+      grid-template-areas: "1" "2" "3"; } }
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0px, 600px);
+  grid-template-rows: 200px 85px;
+  grid-template-areas: "image" "text"; }
+  .card div {
+    padding-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: white; }
+  .card img {
+    background-color: #1b998b;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%; }
+  @media only screen and (max-width: 900px) {
+    .card {
+      display: grid;
+      grid-template-columns: minmax(0px, 1fr);
+      grid-template-rows: 200px 85px;
+      grid-template-areas: "image" "text"; } }
+
+.A {
+  grid-area: A;
+  display: grid;
+  grid-template-areas: "A";
+  background-color: #353837; }
+  .A img {
+    grid-area: A;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%; }
+  .A div {
+    padding: 10px;
+    justify-self: left;
+    text-align: left;
+    grid-area: A;
+    align-self: end;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.B {
+  grid-area: B;
+  display: grid;
+  grid-template-areas: "A"; }
+  .B a {
+    grid-area: A;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%; }
+    .B a img {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      cursor: pointer; }
+  .B div {
+    padding: 10px;
+    justify-self: right;
+    text-align: left;
+    grid-area: A;
+    align-self: end;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.C {
+  grid-area: C;
+  display: grid;
+  grid-template-areas: "A"; }
+  .C a {
+    grid-area: A;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%; }
+    .C a img {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      cursor: pointer;
+      background-color: white; }
+  .C div {
+    padding: 10px;
+    justify-self: right;
+    text-align: left;
+    grid-area: A;
+    align-self: end;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
